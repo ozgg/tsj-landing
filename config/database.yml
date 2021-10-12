@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: tsj_landing
+
+test:
+  <<: *default
+  database: tsj_landing_test
+
+production:
+  <<: *default
+  database: tsj_landing
+  username: tsj
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: localhost
