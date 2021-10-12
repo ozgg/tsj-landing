@@ -11,7 +11,7 @@ require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
 set :application_name, 'tsj_landing'
 set :domain, 'comunit.online'
 set :deploy_to, '/var/www/tsj-landing'
-set :repository, 'git@github.com:ozgg/tsjj-landing'
+set :repository, 'git@github.com:ozgg/tsj-landing'
 set :branch, 'master'
 
 # Optional settings:
