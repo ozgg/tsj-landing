@@ -8,6 +8,9 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 require("@biovision/biovision")
+import Carousel from "@biovision/biovision/components/carousel";
+
+Biovision.addComponent(Carousel);
 
 Rails.start()
 ActiveStorage.start()

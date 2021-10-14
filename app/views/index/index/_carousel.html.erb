@@ -1,0 +1,11 @@
+<div class="js-biovision-carousel">
+  <button class="carousel-button prev"></button>
+  <button class="carousel-button next"></button>
+  <ul class="carousel-container">
+    <% items.each do |image| %>
+      <li class="carousel-item">
+        <figure><%= image_tag("covers/#{image}.jpg", alt: image) %></figure>
+      </li>
+    <% end %>
+  </ul>
+</div>
