@@ -11,7 +11,7 @@ require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
 set :application_name, 'tsj_landing'
 set :domain, 'comunit.online'
 set :deploy_to, '/var/www/tsj-landing'
-set :repository, 'git@github.com:ozgg/tsj-landing'
+set :repository, 'https://github.com/ozgg/tsj-landing.git'
 set :branch, 'master'
 
 # Optional settings:
@@ -29,16 +29,16 @@ set :shared_files, fetch(:shared_files, []).push('config/master.key', '.env')
 # `mina deploy` or `mina rake`.
 task :remote_environment do
   invoke :'rbenv:load'
-  invoke :'nvm:load'
+  # invoke :'nvm:load'
 end
 
-namespace :nvm do
-  task :load do
-    command 'echo "-----> Loading nvm"'
-    command %(source ~/.nvm/nvm.sh)
-    command 'echo "-----> Now using nvm v.`nvm --version`"'
-  end
-end
+# namespace :nvm do
+#   task :load do
+#     command 'echo "-----> Loading nvm"'
+#     command %(source ~/.nvm/nvm.sh)
+#     command 'echo "-----> Now using nvm v.`nvm --version`"'
+#   end
+# end
 
 # Put any custom commands you need to run at setup
 # All paths in `shared_dirs` and `shared_paths` will be created on their own.
